@@ -39,3 +39,9 @@ export const Layout = ({ children }) => {
     </div>
   );
 };
+
+export const Props = (props) => {
+  return (
+    <div className="p-3 absolute bg-gray-100 text-xs text-black -top-5 right-5">props = {JSON.stringify(props)}</div>
+  )
+}

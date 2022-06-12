@@ -1,33 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Components from './ReactRendering/Components';
+import RenderingProps from './2-rendering-optimization-usememo/RenderingProps';
 
 // TODO: Add routes to navigate to each folder
 export default function App() {
   return (
     <>
-      {/* <Router>
+      <Router>
         <div>
           <Routes>
-            <Route path='/about' element={<About />} />
-            <Route path='/users' element={<Users />} />
+            <Route path='/render-props' element={<RenderingProps />} />
+            <Route path='/' element={<Components/>} />
           </Routes>
         </div>
-      </Router> */}
+      </Router>
 
-      <Components />
+      {/* <Components /> */}
     </>
   );
-}
-
-function Home() {
-  return;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
