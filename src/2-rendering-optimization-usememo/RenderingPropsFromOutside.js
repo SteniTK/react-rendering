@@ -15,7 +15,7 @@ const Parent = () => {
   return (
     <VisualComponent title='Parent'>
        <Button onClick={() => setCounter(counter + 1)}>Update State</Button>
-      <Child {...style}/>
+      <Child style={style}/>
     </VisualComponent>
   );
 }
