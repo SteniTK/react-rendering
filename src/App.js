@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Components from './ReactRendering/Components';
+import RenderDomUpdates from './ReactRendering/RenderDomUpdates';
 import RenderingProps from './2-rendering-optimization-usememo/RenderingProps';
 import RenderingPropFunctions from './2-rendering-optimization-usememo/RenderingPropFunctions';
 
@@ -14,6 +15,7 @@ export default function App() {
             <Route path='/' element={<Components/>} />
             <Route path='/render-props' element={<RenderingProps />} />
             <Route path='/render-anonymized-functions' element={<RenderingPropFunctions />} />
+            <Route path='/dom-updates' element={<RenderDomUpdates />}/>
           </Routes>
         </div>
       </Router>
