@@ -45,3 +45,9 @@ export const Props = (props) => {
     <div className="p-3 absolute bg-gray-100 text-xs text-black -top-5 right-5">props = {JSON.stringify(props)}</div>
   )
 }
+
+export const FnProps = (props) => {
+  return (
+    <div className="p-3 absolute bg-gray-100 text-xs text-black -top-5 right-5">props = {props.onClick.toString()}</div>
+  )
+}
