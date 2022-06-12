@@ -10,11 +10,10 @@ const Child = memo((props) => {
 
 const Parent = () => {
   const [counter, setCounter] = useState(0);
-  const style = useMemo(() => ({display: 'flex'}), []);
   return (
     <VisualComponent title='Parent'>
        <Button onClick={() => setCounter(counter + 1)}>Update State</Button>
-      <Child style={style}/>
+      <Child style={{display: 'flex'}}/>
     </VisualComponent>
   );
 }
