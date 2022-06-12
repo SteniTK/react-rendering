@@ -5,6 +5,7 @@ import RenderDomUpdates from './ReactRendering/RenderDomUpdates';
 import RenderingProps from './2-rendering-optimization-usememo/RenderingProps';
 import RenderingPropFunctions from './2-rendering-optimization-usememo/RenderingPropFunctions';
 import RenderingLists from './4-rendering-lists/RenderingLists';
+import DesignState from './5-lifting-state-up/DesignState';
 
 // TODO: Add routes to navigate to each folder
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
             <Route path='/render-props' element={<RenderingProps />} />
             <Route path='/render-anonymized-functions' element={<RenderingPropFunctions />} />
             <Route path='/render-lists' element={<RenderingLists/>} />
+            <Route path='/design-state' element={<DesignState/>} />
             <Route path='/dom-updates' element={<RenderDomUpdates />}/>
           </Routes>
         </div>
