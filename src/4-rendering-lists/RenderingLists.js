@@ -12,11 +12,10 @@ const RenderingLists = () => {
   }, []);
 
   return (
-    comments.map((c) => 
-    <ListItem key={c.id}
-      {...c}
-      onClick={handleClick} 
-    />))
+    <div className="p-10"> 
+      {comments.map((c) => <ListItem key={c.id} {...c} onClick={handleClick} />)}
+    </div>
+  );
 }
 
 const ListItem = memo(({id, comment, onClick}) => <li onClick={() => onClick(id)}>{id} : {comment}</li>);
