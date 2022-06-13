@@ -6,10 +6,6 @@
   animation: rerender 1s linear forwards;
 }
 
-.component {
-  animation: blink 1s ease-out forwards;
-}
-
 @keyframes rerender {
   0% {
     opacity: 0;
@@ -24,14 +20,3 @@
   }
 }
 
-@keyframes blink {
-  0% {
-    background-color: white;
-  }
-  50% {
-    background-color: white;
-  }
-  100% {
-    background-color: white;
-  }
-}

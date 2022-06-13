@@ -1,13 +1,25 @@
+const COLORS = {
+  'Component A': 'bg-red-100',
+  'Component B': 'bg-yellow-100',
+  'Component C': 'bg-emerald-100',
+  'Component D': 'bg-violet-100',
+  'Component E': 'bg-cyan-100',
+  'Component F': 'bg-violet-200',
+  'Parent': 'bg-yellow-100',
+  'memo(Child)': 'bg-emerald-100',
+  'Slow Component': 'bg-emerald-100',
+}
+
 export const VisualComponent = ({ title = 'Component', children }) => {
   return (
-    <div className='component bg-gray-900 rounded text-white p-4 border-2 border-gray-400 relative mt-4'>
+    <div className={`rounded text-white p-4 border-2 border-gray-400 relative mt-4 ${COLORS[title]}`}>
       <span
         key={Math.random()}
         className='rerender absolute left-4 top-2 text-xs uppercase font-bold text-red-500'
       >
         Render
       </span>
-      <h2 className='mt-2 font-bold text-black text-lg mb-4'>{title}</h2>
+    <h2 className='mt-2 font-bold text-black text-lg mb-4'>{title}</h2>
       {children}
     </div>
   );
@@ -57,8 +69,7 @@ export const FnProps = (props) => {
 
 export const Box = ({ title = 'Component', children }) => {
   return (
-    // <div className='component bg-gray-900 rounded text-white p-4 border-2 border-gray-400 relative mt-4'>
-    <div className='component bg-gray-900 rounded text-white p-4 border-2 border-gray-400 relative mt-4'>
+    <div className={`rounded text-white p-4 border-2 border-gray-400 relative mt-4 ${COLORS[title]}`}>
       <h2 className='mt-2 font-bold text-lg mb-4 text-black'>{title}</h2>
       {children}
     </div>
