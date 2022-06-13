@@ -5,7 +5,7 @@ const FastComponent = () => {
   const [counter, setCounter] = useState(0);
   return (
     <VisualComponent title='Component A'>
-      {counter}
+      <span className='text-black'> {counter} </span>
       <Button onClick={() => setCounter(counter + 1)}>Update State</Button>
       <SlowComponent />
     </VisualComponent>
@@ -21,8 +21,7 @@ const SlowComponent = () => {
   return (
     <VisualComponent title='Slow Component'>
       <Button onClick={() => setCounter(counter + 1)}>Update State</Button>
-      <div className='grid grid-rows-2 md:grid-cols-2 md:gap-4 md:grid-rows-1'>
-      </div>
+      <div className='grid grid-rows-2 md:grid-cols-2 md:gap-4 md:grid-rows-1'></div>
     </VisualComponent>
   );
 };

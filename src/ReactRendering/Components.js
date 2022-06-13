@@ -4,7 +4,10 @@ import { Button, VisualComponent, Layout } from './Layouts';
 const ComponentA = () => {
   const [counter, setCounter] = useState(0);
   return (
-    <VisualComponent title='Component A'>
+    <VisualComponent
+      title='Component A'
+      className='component bg-gray-900 rounded text-blue'
+    >
       <Button onClick={() => setCounter(counter + 1)}>Update State</Button>
       <ComponentB />
     </VisualComponent>

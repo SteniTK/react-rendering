@@ -1,6 +1,5 @@
 export const VisualComponent = ({ title = 'Component', children }) => {
   return (
-    // <div className='component bg-gray-900 rounded text-white p-4 border-2 border-gray-400 relative mt-4'>
     <div className='component bg-gray-900 rounded text-white p-4 border-2 border-gray-400 relative mt-4'>
       <span
         key={Math.random()}
@@ -8,7 +7,7 @@ export const VisualComponent = ({ title = 'Component', children }) => {
       >
         Render
       </span>
-      <h2 className='mt-2 font-bold text-lg mb-4'>{title}</h2>
+      <h2 className='mt-2 font-bold text-black text-lg mb-4'>{title}</h2>
       {children}
     </div>
   );
@@ -34,7 +33,7 @@ export const LabeledBox = ({ label, children }) => {
 
 export const Layout = ({ children }) => {
   return (
-    <div className='p-6 bg-gray-800 min-h-screen text-white'>
+    <div className='p-6 bg-gray-800 min-h-screen text-black'>
       <div className='max-w-2xl mx-auto'>{children}</div>
     </div>
   );
@@ -42,21 +41,25 @@ export const Layout = ({ children }) => {
 
 export const Props = (props) => {
   return (
-    <div className="p-3 absolute bg-gray-100 text-xs text-black -top-5 right-5">props = {JSON.stringify(props)}</div>
-  )
-}
+    <div className='p-3 absolute bg-gray-100 text-xs text-black -top-5 right-5'>
+      props = {JSON.stringify(props)}
+    </div>
+  );
+};
 
 export const FnProps = (props) => {
   return (
-    <div className="p-3 absolute bg-gray-100 text-xs text-black -top-5 right-5">props = {props.onClick.toString()}</div>
-  )
-}
+    <div className='p-3 absolute bg-gray-100 text-xs text-black -top-5 right-5'>
+      props = {props.onClick.toString()}
+    </div>
+  );
+};
 
 export const Box = ({ title = 'Component', children }) => {
   return (
     // <div className='component bg-gray-900 rounded text-white p-4 border-2 border-gray-400 relative mt-4'>
     <div className='component bg-gray-900 rounded text-white p-4 border-2 border-gray-400 relative mt-4'>
-      <h2 className='mt-2 font-bold text-lg mb-4'>{title}</h2>
+      <h2 className='mt-2 font-bold text-lg mb-4 text-black'>{title}</h2>
       {children}
     </div>
   );

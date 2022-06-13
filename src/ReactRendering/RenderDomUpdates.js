@@ -5,7 +5,7 @@ const ComponentA = () => {
   const [counter, setCounter] = useState(0);
   return (
     <Box title='Component A'>
-      Count = {counter}
+      <span className='text-black'> Count = {counter} </span>
       <Button onClick={() => setCounter(counter + 1)}>Update Count</Button>
       <ComponentB />
     </Box>
