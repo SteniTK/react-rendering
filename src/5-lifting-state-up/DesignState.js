@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Button, VisualComponent, Layout } from '../ReactRendering/Layouts';
 
-const FastComponent = ({children}) => {
+const FastComponent = () => {
   const [counter, setCounter] = useState(0);
   return (
     <VisualComponent title='Component A'>
       <span className='text-black'> {counter} </span>
       <Button onClick={() => setCounter(counter + 1)}>Update State</Button>
-      {children}
+      <SlowComponent />
     </VisualComponent>
   );
 };
@@ -29,9 +29,7 @@ const SlowComponent = () => {
 export default function Components() {
   return (
     <Layout>
-      <FastComponent>
-        <SlowComponent />
-      </FastComponent>
+      <FastComponent/>
     </Layout>
   );
 }

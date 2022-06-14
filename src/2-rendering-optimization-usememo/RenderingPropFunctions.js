@@ -1,13 +1,6 @@
 import { useState, memo, useMemo } from 'react';
 import { Button, VisualComponent, Layout, FnProps } from '../ReactRendering/Layouts';
 
-const Child = memo((props) => {
-  return (
-    <VisualComponent title="memo(Child)">
-      <FnProps {...props}/>
-    </VisualComponent>);
-});
-
 const Parent = () => {
   const [counter, setCounter] = useState(0);
   return (
@@ -17,6 +10,13 @@ const Parent = () => {
     </VisualComponent>
   );
 }
+
+const Child = memo((props) => {
+  return (
+    <VisualComponent title="memo(Child)">
+      <FnProps {...props}/>
+    </VisualComponent>);
+});
 
 const RenderingProps = () => {
   return (
