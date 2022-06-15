@@ -13,7 +13,7 @@ const RenderingLists = () => {
 
   return (
     <div className="p-10"> 
-      {comments.map((c, index) => <ListItem key={index} {...c} onClick={handleClick} />)}
+      {comments.map((c, index) => <ListItem {...c} onClick={handleClick} />)}
     </div>
   );
 }
